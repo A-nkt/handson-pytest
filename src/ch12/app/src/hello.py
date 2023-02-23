@@ -8,11 +8,9 @@ def full_output(name: str):
 
 app = typer.Typer()
 
-
 @app.command()
 def main(name: Optional[str] = typer.Argument("World")):
-    print(f"Hello, {name}!")
+    print(full_output(name))
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     app()
